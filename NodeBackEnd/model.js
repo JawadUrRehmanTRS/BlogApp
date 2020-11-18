@@ -5,7 +5,8 @@ var schema =  mongoose.Schema({
     UserName:String,
     date:Date,
     image:String,
-    title:String
+    title:String,
+    tags:String
 });
 
 module.exports = mongoose.model('blogSchema',schema);

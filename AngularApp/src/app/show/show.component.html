@@ -3,7 +3,7 @@
         <h2>{{blog.title}}</h2>
     </div>
     <div class="butn">
-        <a  class="btn btn-warning" routerLink="/edit/{{id}}"style="margin-right: 5px;">Edit</a>
+        <a class="btn btn-warning" routerLink="/edit/{{id}}"style="margin-right: 5px;">Edit</a>
         <button type="button" class="btn btn-danger" (click)="deleteBlog()">Delete</button>
     </div>
         
@@ -12,6 +12,11 @@
     <div class="user">
         <h3>{{blog.UserName}}</h3>
     </div>
+
+    <div class="tags" *ngFor="let itm of tags">
+        <p>{{itm}}</p>
+    </div>
+
     <div class="context">
         <p>{{blog.Content}}</p>
     </div>

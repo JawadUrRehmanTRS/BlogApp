@@ -1,4 +1,4 @@
- <div class="set"> 
+ <div > 
 <form [formGroup]="myFrom" (submit)="addBlog()">
     <div class="form-group">
       <label>UserName</label>
@@ -20,11 +20,23 @@
           <input type="file" class="form-control-file" (change)="takeimage($event)">
     </div>
 <div class="image">
-
 <img style="width: 200px; height: 150px;" [src]="url" *ngIf = check >
-
 </div>
     
-    <button type="submit" class="btn btn-primary" [disabled] = "!myFrom.valid || !check">Submit</button>
-  </form>
+<div class="form-group " formArrayName = "tags">
+  <label >Tags</label>
+  <br>
+  <ng-container *ngFor = "let arr of myFrom.get('tags')['controls']; index as i">
+  <input type="text"  class="mt-1 set form-control" formControlName= "{{i}}" name="tag" autocomplete="off">
+<button class="btn btn-danger btn-default" *ngIf ="myFrom.get('tags').controls.length>1" (click)="deleteTag(i)" type="button">Del</button>
+</ng-container>
+<br>
+<button type="button" class="btn btn-secondary mt-2" (click) = "addTags()">ADD TAGS</button>
+</div>
+
+
+<div>
+  <button type="submit" class="btn btn-primary mt-2" >Submit</button>
+</div>  
+</form>
 </div>

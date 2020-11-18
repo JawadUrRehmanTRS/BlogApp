@@ -3,4 +3,5 @@ export class Blog{
     UserName:String;
     title:String;
     image:String;
+    tags : String ;
 }

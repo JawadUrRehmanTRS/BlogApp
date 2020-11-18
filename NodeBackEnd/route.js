@@ -51,7 +51,8 @@ router.post('/file',upload.single('file'),(req,res,next)=>{
         UserName:req.body.UserName,
         image:req.body.image,
         date:Date.now(),
-        title:req.body.title
+        title:req.body.title,
+        tags:req.body.tags
     })
     
     
