@@ -1,0 +1,28 @@
+
+    <div class="title"> 
+        <h2>{{blog.title}}</h2>
+    </div>
+    <div class="butn">
+        <a  class="btn btn-warning" routerLink="/edit/{{id}}"style="margin-right: 5px;">Edit</a>
+        <button type="button" class="btn btn-danger" (click)="deleteBlog()">Delete</button>
+    </div>
+        
+        <img class="image-setting" src="http://localhost:3000/{{blog.image}}">
+
+    <div class="user">
+        <h3>{{blog.UserName}}</h3>
+    </div>
+    <div class="context">
+        <p>{{blog.Content}}</p>
+    </div>
+
+    
+        
+
+    
+
+
+
+
+
+

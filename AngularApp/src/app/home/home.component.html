@@ -1,0 +1,19 @@
+<div class="container">
+    <div class= "heading">
+        <h2>Welcome to Blogs Website</h2>
+    </div>
+    
+    
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12" *ngFor="let itm of blogs" >
+            <div class="card" style="width: 18rem;">
+                <img src="http://localhost:3000/{{itm.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">{{itm.title}}</h5>
+                <p class="card-text">{{itm.content}}</p>
+                <a routerLink="/show/{{itm._id}}" class="btn btn-primary">Show Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

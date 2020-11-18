@@ -1,0 +1,29 @@
+.title{
+    
+    margin:15px;
+    text-align: left;
+    color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.image-setting{
+    height: 500px;
+    width: 500px;
+    float: left;
+}
+.butn{
+    margin-left: 800px;
+
+}
+.user{
+    margin-top: 20px;
+    margin-right: 200px;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.context{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 200px;
+    margin-left: 800px;
+    margin-top: 150px;
+}
