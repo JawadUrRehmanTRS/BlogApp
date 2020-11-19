@@ -1,0 +1,42 @@
+ <div > 
+<form [formGroup]="myFrom" (submit)="addBlog()">
+    <div class="form-group">
+      <label>UserName</label>
+      <input type="text" class="form-control" formControlName= "name" name="UserName" autocomplete="off" >
+    </div>
+    
+    <div class="form-group">
+        <label >Blog Title</label>
+        <input type="text" class="form-control" formControlName= "title" name="title" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label >Blog Content</label>
+        <textarea class="form-control" rows="3" formControlName= "content" name="content" autocomplete="off"></textarea>
+      </div>
+
+    <div class="form-group">
+          <label >Upload Image</label>
+          <input type="file" class="form-control-file" (change)="takeimage($event)">
+    </div>
+<div class="image">
+<img style="width: 200px; height: 150px;" [src]="url" *ngIf = check >
+</div>
+    
+<div class="form-group " formArrayName = "tags">
+  <label >Tags</label>
+  <br>
+  <ng-container *ngFor = "let arr of myFrom.get('tags')['controls']; index as i">
+  <input type="text"  class="mt-1 set form-control" formControlName= "{{i}}" name="tag" autocomplete="off">
+<button class="btn btn-danger btn-default" *ngIf ="myFrom.get('tags').controls.length>1" (click)="deleteTag(i)" type="button">Del</button>
+</ng-container>
+<br>
+<button type="button" class="btn btn-secondary mt-2" (click) = "addTags()">ADD TAGS</button>
+</div>
+
+
+<div>
+  <button type="submit" class="btn btn-primary mt-2" >Add Blog</button>
+</div>  
+</form>
+</div>

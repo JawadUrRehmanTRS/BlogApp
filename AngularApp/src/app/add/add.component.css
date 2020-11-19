@@ -1,0 +1,16 @@
+.form-control{
+    border: solid;
+}
+.image{
+    margin-bottom : 15px;
+}
+.set{
+    width: 700px;
+    border: solid;
+    margin: 5px;
+    display: inline-block
+}
+.btn-set{
+    margin-right: 300px;
+    float: right;
+}

@@ -1,0 +1,43 @@
+
+    <div class="title"> 
+        <h2>{{blog.title}}</h2>
+    </div>
+    <div class="butn">
+        <a class="btn btn-warning" routerLink="/edit/{{id}}"style="margin-right: 5px;">Edit</a>
+        <button type="button" class="btn btn-danger" (click)="deleteBlog()">Delete</button>
+    </div>
+        
+        <img class="image-setting" src="http://localhost:3000/{{blog.image}}">
+
+    <div class="user">
+        <h3>{{blog.UserName}}</h3>
+    </div>
+
+    <div class="tags" *ngFor="let itm of tags">
+        <p>{{itm}}</p>
+    </div>
+
+    <div class="context">
+        <p>{{blog.Content}}</p>
+    </div>
+    <div>
+        <h3>Comment Section</h3>
+    <ng-container *ngFor="let itm of comment" >
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{itm.comment}}</p>
+          
+        </blockquote>
+      </div>
+    </ng-container>
+</div>
+    <br>
+<app-comment  [id]="id"  (event)="addComment($event)"></app-comment>
+
+    
+
+
+
+
+
+
